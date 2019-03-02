@@ -13,5 +13,10 @@ struct Constants {
     static let UID = "uid"
     static let ERROR = "Error"
     static let OK = "Ok"
-    
+    static let USERS = "users"
+    static let NAME = "name"
+    static let EMAIL = "email"
+    static let CITY = "city"
+    static let SUCCESS = "Success"
+    static let USER_SUCCESSFULLY_REGISTERED = "User successfully registered."
 }

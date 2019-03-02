@@ -21,6 +21,7 @@
 		E9CAE24C2229E1D700391A8F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE24B2229E1D700391A8F /* Alert.swift */; };
 		E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE24D2229E3B000391A8F /* ProfileVC.swift */; };
 		E9CAE2512229E74D00391A8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE2502229E74D00391A8F /* Constants.swift */; };
+		E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE2522229F29B00391A8F /* SignUpVC.swift */; };
 		E9D750EA22299408004DB91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D750E922299408004DB91B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		E9CAE24B2229E1D700391A8F /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		E9CAE24D2229E3B000391A8F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		E9CAE2502229E74D00391A8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9CAE2522229F29B00391A8F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E9D750E922299408004DB91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 			children = (
 				E90F3F5D222990FA00613100 /* LoginVC.swift */,
 				E9CAE24D2229E3B000391A8F /* ProfileVC.swift */,
+				E9CAE2522229F29B00391A8F /* SignUpVC.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */,
 				E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */,
 				E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */,
 				E90F3F5E222990FA00613100 /* LoginVC.swift in Sources */,
