@@ -10,10 +10,18 @@ import Foundation
 
 class Asteroid {
     
-//    var link_self: String
-//    var id: Int
-//    var neoReferenceId: Int
+    var id: Int
+    var name: String
+    var absoluteMagnitude: Double
     
-    
+    init?(_ data: [String: Any]) {
+        guard let idStr = data[Constants.ID] as? String, let id = Int(idStr) else { return nil }
+        guard let name = data[Constants.NAME] as? String else { return nil }
+        guard let absoluteMagnitude = data[Constants.ABSOLUTE_MAGNITUDE_H] as? Double else { return nil }
+        
+        self.id = id
+        self.name = name
+        self.absoluteMagnitude = absoluteMagnitude
+    }
     
 }

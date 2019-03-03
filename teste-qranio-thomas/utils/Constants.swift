@@ -27,5 +27,8 @@ struct Constants {
     static let NO = "No"
     static let WARNING = "Warning"
     static let MESSAGE_LOGOUT = "Are you sure you want to quit?"
+    static let ID = "id"
+    static let ABSOLUTE_MAGNITUDE_H = "absolute_magnitude_h"
+    static let ABSOLUTE_MAGNITUDE_LABEL = "ab"
     
 }

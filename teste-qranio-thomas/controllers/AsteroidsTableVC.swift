@@ -10,27 +10,46 @@ import UIKit
 
 class AsteroidsTableVC: UITableViewController {
     
-    var asteroids = [Asteroid]()
+    var days = [String]()
+    var asteroids = [String: [Asteroid]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
+        loadListAsteroids()
+    }
+    
+    func loadListAsteroids() {
+        AsteroidsDao().getAsteroids { days, asteroids in
+            guard let daysList = days else { return }
+            guard let asteroidList = asteroids else { return }
+            
+            self.days = daysList
+            self.asteroids = asteroidList
+            self.tableView.reloadData()
+        }
     }
     
     
     //MARK:- TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return days.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return asteroids.count
+        return asteroids[days[section]]?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let asteroids = self.asteroids[days[section]]!
+        return (asteroids.count > 0) ? days[section] : nil
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let asteroid = asteroids[indexPath.row]
+        let asteroid = asteroids[days[indexPath.section]]![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "asteroidCell") as! UITableViewCell
-        
+        cell.textLabel?.text = asteroid.name
+        cell.detailTextLabel?.text = "\(asteroid.absoluteMagnitude) \(Constants.ABSOLUTE_MAGNITUDE_LABEL)"
         return cell
     }
     
