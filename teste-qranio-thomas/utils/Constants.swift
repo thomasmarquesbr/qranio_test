@@ -10,6 +10,10 @@ import Foundation
 
 struct Constants {
     
+    static let API_KEY_NASA = "vAZJdvWRJvwJJKFTtWs8t1HHiaXrc6hantKQuxNI"
+    static let START_DATE = "2019-02-27"
+    static let END_DATE = "2019-03-03"
+    
     static let UID = "uid"
     static let ERROR = "Error"
     static let OK = "Ok"

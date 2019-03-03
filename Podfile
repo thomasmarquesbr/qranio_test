@@ -10,7 +10,7 @@ target 'teste-qranio-thomas' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  
+  pod 'Alamofire', '~> 5.0.0-beta.2'
 
   target 'teste-qranio-thomasTests' do
     inherit! :search_paths

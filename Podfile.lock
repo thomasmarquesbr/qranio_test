@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.0-beta.2)
   - BoringSSL-GRPC (0.0.2):
     - BoringSSL-GRPC/Implementation (= 0.0.2)
     - BoringSSL-GRPC/Interface (= 0.0.2)
@@ -102,12 +103,14 @@ PODS:
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.2)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -126,6 +129,7 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
+  Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
   FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
@@ -143,6 +147,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: ceb6b15541ae3cdebd53067d7b0a801aaa487abd
+PODFILE CHECKSUM: 0ef00b2d4cb03482f2182e999acd464bcfe45d17
 
 COCOAPODS: 1.5.3
