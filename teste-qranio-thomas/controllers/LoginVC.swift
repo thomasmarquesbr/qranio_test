@@ -29,21 +29,36 @@ class LoginVC: UIViewController {
         }
     }
     
+    func formIsValid() -> Bool{
+        do {
+            _ = try emailTextField.validatedText(validationType: ValidatorType.email)
+            _ = try passwordTextField.validatedText(validationType: ValidatorType.password)
+            return true
+        } catch(let error) {
+            Alert(self).show(title: Constants.ERROR,
+                             message: (error as! ValidationError).message,
+                             buttonTitle: Constants.OK)
+            return false
+        }
+    }
+    
     //MARK:- Button Actions
     @IBAction func didTapLogin(_ sender: Any) {
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        activityIndicator.startAnimating()
-        LoginDao().performLogin(email, password) { (errorMessage) in
-            self.activityIndicator.stopAnimating()
-            if let message = errorMessage {
-                Alert(self).show(title: Constants.ERROR,
-                                 message: message,
-                                 buttonTitle: Constants.OK,
-                                 buttonTouched: nil,
-                                 completion: nil)
-            } else {
-                self.callMainVC()
+        if formIsValid() {
+            guard let email = emailTextField.text else { return }
+            guard let password = passwordTextField.text else { return }
+            activityIndicator.startAnimating()
+            LoginDao().performLogin(email, password) { (errorMessage) in
+                self.activityIndicator.stopAnimating()
+                if let message = errorMessage {
+                    Alert(self).show(title: Constants.ERROR,
+                                     message: message,
+                                     buttonTitle: Constants.OK,
+                                     buttonTouched: nil,
+                                     completion: nil)
+                } else {
+                    self.callMainVC()
+                }
             }
         }
     }

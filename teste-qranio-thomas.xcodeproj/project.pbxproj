@@ -22,6 +22,8 @@
 		E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE24D2229E3B000391A8F /* ProfileVC.swift */; };
 		E9CAE2512229E74D00391A8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE2502229E74D00391A8F /* Constants.swift */; };
 		E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE2522229F29B00391A8F /* SignUpVC.swift */; };
+		E9CAE255222A049500391A8F /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE254222A049500391A8F /* Validators.swift */; };
+		E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */; };
 		E9D750EA22299408004DB91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D750E922299408004DB91B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		E9CAE24D2229E3B000391A8F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		E9CAE2502229E74D00391A8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9CAE2522229F29B00391A8F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		E9CAE254222A049500391A8F /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		E9D750E922299408004DB91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +222,7 @@
 		E9CAE24A2229E17E00391A8F /* components */ = {
 			isa = PBXGroup;
 			children = (
+				E9CAE256222A06D800391A8F /* extensions */,
 				E9CAE24B2229E1D700391A8F /* Alert.swift */,
 			);
 			path = components;
@@ -227,8 +232,17 @@
 			isa = PBXGroup;
 			children = (
 				E9CAE2502229E74D00391A8F /* Constants.swift */,
+				E9CAE254222A049500391A8F /* Validators.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E9CAE256222A06D800391A8F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +490,9 @@
 				E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */,
 				E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */,
 				E90F3F5E222990FA00613100 /* LoginVC.swift in Sources */,
+				E9CAE255222A049500391A8F /* Validators.swift in Sources */,
 				E9CAE24C2229E1D700391A8F /* Alert.swift in Sources */,
+				E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */,
 				E90F3F5C222990FA00613100 /* AppDelegate.swift in Sources */,
 				E9CAE2512229E74D00391A8F /* Constants.swift in Sources */,
 			);

@@ -16,6 +16,13 @@ class Alert {
         self.viewController = viewController
     }
     
+    func show(title: String?, message: String?, buttonTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: buttonTitle, style: .default)
+        alert.addAction(action)
+        viewController.present(alert, animated: true)
+    }
+    
     func show(title: String?, message: String?, buttonTitle: String, buttonTouched: (()->Void)?, completion: (()->Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: buttonTitle, style: .default) { (action) in
