@@ -30,6 +30,16 @@ class AsteroidsTableVC: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToAsteroidDetail" {
+            guard let asteroidDetailVC = segue.destination as? AsteroidDetailVC else { return }
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let asteroid = asteroids[days[indexPath.section]]![indexPath.row]
+            asteroidDetailVC.idAsteroid = asteroid.id
+            asteroidDetailVC.title = asteroid.name
+        }
+    }
+    
     
     //MARK:- TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
