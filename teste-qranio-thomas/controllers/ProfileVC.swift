@@ -10,8 +10,21 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var nameTextField: UILabel!
+    @IBOutlet weak var emailTextField: UILabel!
+    @IBOutlet weak var cityTextField: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadDataUser()
+    }
+    
+    func loadDataUser() {
+        UsersDao().getCurrentUserInfo { (user) in
+            self.nameTextField.text = user?.name
+            self.emailTextField.text = user?.email
+            self.cityTextField.text = user?.city
+        }
     }
     
     func callLoginVC() {
@@ -27,17 +40,25 @@ class ProfileVC: UIViewController {
     
     //MARK:- Button Actions
     @IBAction func didTapLogout(_ sender: Any) {
-        LoginDao().performLogout { (errorMessage) in
-            if let message = errorMessage {
-                Alert(self).show(title: Constants.ERROR,
-                                 message: message,
-                                 buttonTitle: Constants.OK,
-                                 buttonTouched: nil,
-                                 completion: nil)
-            } else {
-                self.callLoginVC()
+        Alert(self).show(title: Constants.WARNING,
+                         message: Constants.MESSAGE_LOGOUT,
+                         leftButtonTitle: Constants.NO,
+                         rightButtonTitle: Constants.YES,
+                         leftButtonTouched: nil,
+                         rightButtonTouched: {
+                            
+            LoginDao().performLogout { (errorMessage) in
+                if let message = errorMessage {
+                    Alert(self).show(title: Constants.ERROR,
+                                     message: message,
+                                     buttonTitle: Constants.OK,
+                                     buttonTouched: nil,
+                                     completion: nil)
+                } else {
+                    self.callLoginVC()
+                }
             }
-        }
+        }, completion: nil)
     }
     
 }

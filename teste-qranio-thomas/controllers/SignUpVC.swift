@@ -21,7 +21,7 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
     }
     
-    func formIsValid() -> Bool{
+    func formIsValid() -> Bool {
         do {
             _ = try nameTextField.validatedText(validationType: .requiredField(field: Constants.NAME))
             _ = try emailTextField.validatedText(validationType: .email)

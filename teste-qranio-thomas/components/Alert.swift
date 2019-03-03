@@ -34,4 +34,27 @@ class Alert {
         }
     }
     
+    func show(title: String?,
+              message: String?,
+              leftButtonTitle: String,
+              rightButtonTitle: String,
+              leftButtonTouched: (()->Void)?,
+              rightButtonTouched: (()->Void)?,
+              completion: (()->Void)?) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let leftAction = UIAlertAction(title: leftButtonTitle, style: .cancel) { (action) in
+            leftButtonTouched?()
+        }
+        let rightAction = UIAlertAction(title: rightButtonTitle, style: .default) { (action) in
+            rightButtonTouched?()
+        }
+        alert.addAction(leftAction)
+        alert.addAction(rightAction)
+        viewController.present(alert, animated: true) {
+            completion?()
+        }
+    }
+
+    
 }

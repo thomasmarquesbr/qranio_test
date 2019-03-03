@@ -19,4 +19,9 @@ struct Constants {
     static let CITY = "city"
     static let SUCCESS = "Success"
     static let USER_SUCCESSFULLY_REGISTERED = "User successfully registered."
+    static let YES = "Yes"
+    static let NO = "No"
+    static let WARNING = "Warning"
+    static let MESSAGE_LOGOUT = "Are you sure you want to quit?"
+    
 }

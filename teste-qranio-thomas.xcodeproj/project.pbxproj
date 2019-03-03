@@ -24,6 +24,8 @@
 		E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE2522229F29B00391A8F /* SignUpVC.swift */; };
 		E9CAE255222A049500391A8F /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE254222A049500391A8F /* Validators.swift */; };
 		E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */; };
+		E9CAE25A222B776B00391A8F /* UsersDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE259222B776B00391A8F /* UsersDao.swift */; };
+		E9CAE25C222B780300391A8F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE25B222B780300391A8F /* User.swift */; };
 		E9D750EA22299408004DB91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D750E922299408004DB91B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		E9CAE2522229F29B00391A8F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E9CAE254222A049500391A8F /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		E9CAE259222B776B00391A8F /* UsersDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDao.swift; sourceTree = "<group>"; };
+		E9CAE25B222B780300391A8F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E9D750E922299408004DB91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +192,7 @@
 		E9CAE2442229984000391A8F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E9CAE25B222B780300391A8F /* User.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CAE24822299A1500391A8F /* LoginDao.swift */,
+				E9CAE259222B776B00391A8F /* UsersDao.swift */,
 			);
 			path = dao;
 			sourceTree = "<group>";
@@ -491,10 +497,12 @@
 				E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */,
 				E90F3F5E222990FA00613100 /* LoginVC.swift in Sources */,
 				E9CAE255222A049500391A8F /* Validators.swift in Sources */,
+				E9CAE25A222B776B00391A8F /* UsersDao.swift in Sources */,
 				E9CAE24C2229E1D700391A8F /* Alert.swift in Sources */,
 				E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */,
 				E90F3F5C222990FA00613100 /* AppDelegate.swift in Sources */,
 				E9CAE2512229E74D00391A8F /* Constants.swift in Sources */,
+				E9CAE25C222B780300391A8F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
