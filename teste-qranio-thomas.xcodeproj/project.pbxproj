@@ -26,6 +26,7 @@
 		E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */; };
 		E9CAE25A222B776B00391A8F /* UsersDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE259222B776B00391A8F /* UsersDao.swift */; };
 		E9CAE25C222B780300391A8F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE25B222B780300391A8F /* User.swift */; };
+		E9CAE25E222B865D00391A8F /* UsersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE25D222B865D00391A8F /* UsersTableVC.swift */; };
 		E9D750EA22299408004DB91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D750E922299408004DB91B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		E9CAE259222B776B00391A8F /* UsersDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDao.swift; sourceTree = "<group>"; };
 		E9CAE25B222B780300391A8F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E9CAE25D222B865D00391A8F /* UsersTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableVC.swift; sourceTree = "<group>"; };
 		E9D750E922299408004DB91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,8 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				E90F3F5D222990FA00613100 /* LoginVC.swift */,
-				E9CAE24D2229E3B000391A8F /* ProfileVC.swift */,
 				E9CAE2522229F29B00391A8F /* SignUpVC.swift */,
+				E9CAE24D2229E3B000391A8F /* ProfileVC.swift */,
+				E9CAE25D222B865D00391A8F /* UsersTableVC.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAE25E222B865D00391A8F /* UsersTableVC.swift in Sources */,
 				E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */,
 				E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */,
 				E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */,
