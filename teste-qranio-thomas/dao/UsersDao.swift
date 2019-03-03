@@ -32,4 +32,20 @@ class UsersDao {
         }
     }
     
+    func getUsers(completion: @escaping([User]?)-> Void) {
+        usersRef.getDocuments { (querySnapshot, error) in
+            var users = [User]()
+            guard let querySnapshot = querySnapshot else {
+                completion(nil)
+                return
+            }
+            for document in querySnapshot.documents {
+                if let user = User(uid: document.documentID, data: document.data()) {
+                    users.append(user)
+                }
+            }
+            completion(users)
+        }
+    }
+    
 }
