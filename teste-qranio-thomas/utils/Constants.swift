@@ -59,5 +59,9 @@ struct Constants {
     static let MEAN_ANOMALY = "mean_anomaly"
     static let MEAN_MOTION = "mean_motion"
     static let EQUINOX = "equinox"
+    static let NEAR_EARTH_OBJECT_COUNT = "near_earth_object_count"
+    static let CLOSE_APPROACH_COUNT = "close_approach_count"
+    static let LAST_UPDATED = "last_updated"
+    static let SOURCE = "source"
     
 }

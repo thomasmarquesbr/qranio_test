@@ -12,6 +12,8 @@ class AsteroidsTableVC: UITableViewController {
     
     var days = [String]()
     var asteroids = [String: [Asteroid]]()
+    var startDate: String?
+    var endDate: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,9 @@ class AsteroidsTableVC: UITableViewController {
     }
     
     func loadListAsteroids() {
-        AsteroidsDao().getAsteroids { days, asteroids in
+        guard let startDate = startDate else { return }
+        guard let endDate = endDate else { return }
+        AsteroidsDao().getAsteroids(startDate, endDate) { days, asteroids in
             guard let daysList = days else { return }
             guard let asteroidList = asteroids else { return }
             
