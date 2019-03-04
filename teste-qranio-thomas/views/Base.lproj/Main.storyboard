@@ -299,12 +299,170 @@
                     <connections>
                         <segue destination="J7X-6R-vbK" kind="relationship" relationship="viewControllers" id="fVb-28-cMY"/>
                         <segue destination="4nj-jt-fT7" kind="relationship" relationship="viewControllers" id="KsC-cg-ybm"/>
-                        <segue destination="el7-QD-a4K" kind="relationship" relationship="viewControllers" id="Anp-kd-OPX"/>
+                        <segue destination="MN5-QE-iCJ" kind="relationship" relationship="viewControllers" id="Ek7-sH-kl2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qh-IM-R6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1038" y="133"/>
+        </scene>
+        <!--Nasa-->
+        <scene sceneID="M0P-sO-G60">
+            <objects>
+                <viewController id="b6P-UE-9zM" customClass="NasaStatsVC" customModule="teste_qranio_thomas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XuT-Bw-5gt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-Kt-5Sc">
+                                <rect key="frame" x="12" y="100" width="390" height="701"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EPV-19-hmo">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="122.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q4R-J4-EAl">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="122.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Near earth object count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zc-TC-bqz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Close approach count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pc-Tq-f0v">
+                                                        <rect key="frame" x="15" y="25.5" width="184" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last updated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHl-hE-PBT">
+                                                        <rect key="frame" x="85.5" y="51" width="113.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Source:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-9m-Ymc">
+                                                        <rect key="frame" x="135.5" y="76.5" width="63.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nasa url:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-u8-4gZ">
+                                                        <rect key="frame" x="126" y="102" width="73" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fxH-yT-8de">
+                                                <rect key="frame" x="204" y="0.0" width="186" height="122.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-wD-LAb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-9m-WHB">
+                                                        <rect key="frame" x="0.0" y="25.5" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phE-bp-nzd">
+                                                        <rect key="frame" x="0.0" y="51" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgJ-5U-erO">
+                                                        <rect key="frame" x="0.0" y="76.5" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZt-C5-gOR">
+                                                        <rect key="frame" x="0.0" y="102" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N7O-xm-5Yi">
+                                        <rect key="frame" x="0.0" y="169.5" width="390" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Start Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-NE-KPX">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="216"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="L45-Gm-bBQ">
+                                                <rect key="frame" x="93" y="0.0" width="297" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="573351356.85801101">
+                                                    <!--2019-03-04 00:15:56 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="msp-wK-Igx">
+                                        <rect key="frame" x="0.0" y="385.5" width="390" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="End Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-o9-YkT">
+                                                <rect key="frame" x="0.0" y="97.5" width="60" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-3B-6az">
+                                                <rect key="frame" x="70" y="0.0" width="320" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="573351356.85801101">
+                                                    <!--2019-03-04 00:15:56 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-Og-fCL">
+                                        <rect key="frame" x="148.5" y="671" width="93" height="30"/>
+                                        <state key="normal" title="See asteroids"/>
+                                        <connections>
+                                            <segue destination="xOo-MN-0Zk" kind="show" identifier="goToAsteroids" id="6sq-MG-QhQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EPV-19-hmo" firstAttribute="leading" secondItem="hq8-Kt-5Sc" secondAttribute="leading" id="Bnv-5J-oU5"/>
+                                    <constraint firstAttribute="trailing" secondItem="EPV-19-hmo" secondAttribute="trailing" id="o0D-DZ-4OX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hq8-Kt-5Sc" firstAttribute="leading" secondItem="XuT-Bw-5gt" secondAttribute="leading" constant="12" id="2Kz-eN-388"/>
+                            <constraint firstItem="lee-pY-6p3" firstAttribute="bottom" secondItem="hq8-Kt-5Sc" secondAttribute="bottom" constant="12" id="Dbz-mF-7jy"/>
+                            <constraint firstItem="hq8-Kt-5Sc" firstAttribute="top" secondItem="lee-pY-6p3" secondAttribute="top" constant="12" id="TtQ-JL-stJ"/>
+                            <constraint firstItem="lee-pY-6p3" firstAttribute="trailing" secondItem="hq8-Kt-5Sc" secondAttribute="trailing" constant="12" id="XXZ-Ic-EgV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lee-pY-6p3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nasa" id="QSZ-fl-8Rr"/>
+                    <connections>
+                        <outlet property="closeApproachCountTextField" destination="EjO-9m-WHB" id="wY3-TF-QFQ"/>
+                        <outlet property="datePickerEnd" destination="ARP-3B-6az" id="NFU-dJ-C3J"/>
+                        <outlet property="datePickerStart" destination="L45-Gm-bBQ" id="rlc-nb-UdK"/>
+                        <outlet property="lastUpdatedTextField" destination="phE-bp-nzd" id="N5k-Ov-z7O"/>
+                        <outlet property="nasaJplUrlTextField" destination="PZt-C5-gOR" id="jcD-KS-2tT"/>
+                        <outlet property="nearEarthObjectCountTextField" destination="ZeH-wD-LAb" id="bHE-Kx-p9g"/>
+                        <outlet property="sourceTextField" destination="JgJ-5U-erO" id="s71-3G-OnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ET-Zc-Cxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3651" y="131"/>
         </scene>
         <!--Asteroids-->
         <scene sceneID="Ejb-VC-zmS">
@@ -352,7 +510,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwW-kx-97Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3702" y="134"/>
+            <point key="canvasLocation" x="4643" y="133"/>
         </scene>
         <!--Asteroid DetailVC-->
         <scene sceneID="mmh-Gv-B9d">
@@ -613,7 +771,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c3-3m-qSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4680.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="5622" y="131"/>
         </scene>
         <!--Profile-->
         <scene sceneID="DWN-86-OmK">
@@ -653,24 +811,24 @@
             </objects>
             <point key="canvasLocation" x="2742" y="-593"/>
         </scene>
-        <!--Nasa-->
-        <scene sceneID="wR7-kF-igL">
+        <!--Item-->
+        <scene sceneID="BKq-pa-YZE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="el7-QD-a4K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nasa" id="3aq-GE-gg0"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MN5-QE-iCJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hSq-L4-WV0"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EqI-WF-ijI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPf-VY-dpp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xOo-MN-0Zk" kind="relationship" relationship="rootViewController" id="TSE-7Y-T9L"/>
+                        <segue destination="b6P-UE-9zM" kind="relationship" relationship="rootViewController" id="3O2-AA-Pmh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="joR-EH-zC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1v-Ir-ppM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742" y="133"/>
+            <point key="canvasLocation" x="2741" y="131"/>
         </scene>
     </scenes>
 </document>

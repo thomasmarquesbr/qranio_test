@@ -12,10 +12,26 @@ import Alamofire
 class AsteroidsDao {
     
     static let BASE_URL_API = "https://api.nasa.gov/neo/rest/v1/"
+    static let URL_STATS = "\(BASE_URL_API)/stats?api_key=\(Constants.API_KEY_NASA)"
     static let URL_ASTEROIDS = "\(BASE_URL_API)feed?start_date=\(Constants.START_DATE)&end_date=\(Constants.END_DATE)&api_key=\(Constants.API_KEY_NASA)"
     
-    func getAsteroids(completion: @escaping([String]?, [String: [Asteroid]]?)-> Void) {
-        AF.request(AsteroidsDao.URL_ASTEROIDS).responseJSON { response in
+    func getStats(completion: @escaping(NasaStats?)-> Void) {
+        AF.request(AsteroidsDao.URL_STATS).responseJSON { response in
+            guard let data = response.value as? [String: Any] else {
+                completion(nil)
+                return
+            }
+            guard let nasaStats = NasaStats(data) else {
+                completion(nil)
+                return
+            }
+            completion(nasaStats)
+        }
+    }
+    
+    func getAsteroids(_ startDate: String, _ endDate: String, completion: @escaping([String]?, [String: [Asteroid]]?)-> Void) {
+        let url = "\(AsteroidsDao.BASE_URL_API)feed?start_date=\(startDate)&end_date=\(endDate)&api_key=\(Constants.API_KEY_NASA)"
+        AF.request(url).responseJSON { response in
             guard let data = response.value as? [String: Any] else {
                 completion(nil, nil)
                 return
