@@ -23,6 +23,14 @@
 		E95853CA222C997A00E888D3 /* OrbitalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C9222C997A00E888D3 /* OrbitalData.swift */; };
 		E95853CC222CA69700E888D3 /* NasaStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853CB222CA69700E888D3 /* NasaStats.swift */; };
 		E95853CE222CAAD200E888D3 /* NasaStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */; };
+		E95853D0222D760500E888D3 /* MarvelDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853CF222D760500E888D3 /* MarvelDao.swift */; };
+		E95853D2222D76B200E888D3 /* CharacterTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D1222D76B200E888D3 /* CharacterTableVC.swift */; };
+		E95853D4222D802E00E888D3 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D3222D802E00E888D3 /* Hash.swift */; };
+		E95853D6222E1E8800E888D3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D5222E1E8800E888D3 /* Character.swift */; };
+		E95853DA222F118C00E888D3 /* ComicsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D9222F118C00E888D3 /* ComicsTableVC.swift */; };
+		E95853DC222F17C800E888D3 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853DB222F17C800E888D3 /* Comic.swift */; };
+		E95853DE222F1FD000E888D3 /* EventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853DD222F1FD000E888D3 /* EventsTableVC.swift */; };
+		E95853E0222F202600E888D3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853DF222F202600E888D3 /* Event.swift */; };
 		E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE24822299A1500391A8F /* LoginDao.swift */; };
 		E9CAE24C2229E1D700391A8F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE24B2229E1D700391A8F /* Alert.swift */; };
 		E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAE24D2229E3B000391A8F /* ProfileVC.swift */; };
@@ -84,6 +92,14 @@
 		E95853C9222C997A00E888D3 /* OrbitalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalData.swift; sourceTree = "<group>"; };
 		E95853CB222CA69700E888D3 /* NasaStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaStats.swift; sourceTree = "<group>"; };
 		E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaStatsVC.swift; sourceTree = "<group>"; };
+		E95853CF222D760500E888D3 /* MarvelDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDao.swift; sourceTree = "<group>"; };
+		E95853D1222D76B200E888D3 /* CharacterTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableVC.swift; sourceTree = "<group>"; };
+		E95853D3222D802E00E888D3 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		E95853D5222E1E8800E888D3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E95853D9222F118C00E888D3 /* ComicsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTableVC.swift; sourceTree = "<group>"; };
+		E95853DB222F17C800E888D3 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		E95853DD222F1FD000E888D3 /* EventsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableVC.swift; sourceTree = "<group>"; };
+		E95853DF222F202600E888D3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E9CAE24822299A1500391A8F /* LoginDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDao.swift; sourceTree = "<group>"; };
 		E9CAE24B2229E1D700391A8F /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		E9CAE24D2229E3B000391A8F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -215,6 +231,9 @@
 				E9CAE261222B907800391A8F /* Asteroid.swift */,
 				E95853C5222C4B2B00E888D3 /* AsteroidDetail.swift */,
 				E95853C9222C997A00E888D3 /* OrbitalData.swift */,
+				E95853D5222E1E8800E888D3 /* Character.swift */,
+				E95853DB222F17C800E888D3 /* Comic.swift */,
+				E95853DF222F202600E888D3 /* Event.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -229,6 +248,9 @@
 				E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */,
 				E9CAE25F222B902800391A8F /* AsteroidsTableVC.swift */,
 				E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */,
+				E95853D1222D76B200E888D3 /* CharacterTableVC.swift */,
+				E95853D9222F118C00E888D3 /* ComicsTableVC.swift */,
+				E95853DD222F1FD000E888D3 /* EventsTableVC.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -248,6 +270,7 @@
 				E9CAE24822299A1500391A8F /* LoginDao.swift */,
 				E9CAE259222B776B00391A8F /* UsersDao.swift */,
 				E95853C3222B924200E888D3 /* AsteroidsDao.swift */,
+				E95853CF222D760500E888D3 /* MarvelDao.swift */,
 			);
 			path = dao;
 			sourceTree = "<group>";
@@ -266,6 +289,7 @@
 			children = (
 				E9CAE2502229E74D00391A8F /* Constants.swift */,
 				E9CAE254222A049500391A8F /* Validators.swift */,
+				E95853D3222D802E00E888D3 /* Hash.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -522,21 +546,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				E95853C8222C4BA000E888D3 /* AsteroidDetailVC.swift in Sources */,
+				E95853DE222F1FD000E888D3 /* EventsTableVC.swift in Sources */,
 				E9CAE25E222B865D00391A8F /* UsersTableVC.swift in Sources */,
 				E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */,
+				E95853D4222D802E00E888D3 /* Hash.swift in Sources */,
 				E9CAE24E2229E3B000391A8F /* ProfileVC.swift in Sources */,
 				E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */,
 				E90F3F5E222990FA00613100 /* LoginVC.swift in Sources */,
 				E9CAE255222A049500391A8F /* Validators.swift in Sources */,
 				E9CAE25A222B776B00391A8F /* UsersDao.swift in Sources */,
+				E95853DC222F17C800E888D3 /* Comic.swift in Sources */,
 				E9CAE260222B902800391A8F /* AsteroidsTableVC.swift in Sources */,
+				E95853E0222F202600E888D3 /* Event.swift in Sources */,
 				E9CAE24C2229E1D700391A8F /* Alert.swift in Sources */,
 				E95853C4222B924200E888D3 /* AsteroidsDao.swift in Sources */,
 				E95853CA222C997A00E888D3 /* OrbitalData.swift in Sources */,
+				E95853D2222D76B200E888D3 /* CharacterTableVC.swift in Sources */,
 				E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */,
 				E9CAE262222B907800391A8F /* Asteroid.swift in Sources */,
 				E90F3F5C222990FA00613100 /* AppDelegate.swift in Sources */,
+				E95853DA222F118C00E888D3 /* ComicsTableVC.swift in Sources */,
+				E95853D0222D760500E888D3 /* MarvelDao.swift in Sources */,
 				E95853CE222CAAD200E888D3 /* NasaStatsVC.swift in Sources */,
+				E95853D6222E1E8800E888D3 /* Character.swift in Sources */,
 				E95853C6222C4B2B00E888D3 /* AsteroidDetail.swift in Sources */,
 				E95853CC222CA69700E888D3 /* NasaStats.swift in Sources */,
 				E9CAE2512229E74D00391A8F /* Constants.swift in Sources */,

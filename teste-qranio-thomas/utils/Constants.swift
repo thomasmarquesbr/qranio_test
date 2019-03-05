@@ -11,6 +11,9 @@ import Foundation
 struct Constants {
     
     static let API_KEY_NASA = "vAZJdvWRJvwJJKFTtWs8t1HHiaXrc6hantKQuxNI"
+    static let PRIV_KEY_MARVEL = "f28dd34363c41e5c35036edb4fae4a414c5fcc82"
+    static let PUB_KEY_MARVEL = "e2ba7dcbf15d280e107821f36c762dc6"
+    
     static let START_DATE = "2019-02-27"
     static let END_DATE = "2019-03-03"
     
@@ -63,5 +66,15 @@ struct Constants {
     static let CLOSE_APPROACH_COUNT = "close_approach_count"
     static let LAST_UPDATED = "last_updated"
     static let SOURCE = "source"
-    
+    static let DESCRIPTION = "description"
+    static let MODIFIED = "modified"
+    static let RESOURCE_URI = "resourceURI"
+    static let THUMBNAIL = "thumbnail"
+    static let PATH = "path"
+    static let COMICS = "comics"
+    static let CANCEL = "Cancel"
+    static let TITLE = "title"
+    static let DATA = "data"
+    static let RESULTS = "results"
+    static let EVENTS = "events"
 }
