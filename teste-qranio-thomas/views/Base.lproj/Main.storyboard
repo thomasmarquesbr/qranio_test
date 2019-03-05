@@ -300,6 +300,7 @@
                         <segue destination="J7X-6R-vbK" kind="relationship" relationship="viewControllers" id="fVb-28-cMY"/>
                         <segue destination="4nj-jt-fT7" kind="relationship" relationship="viewControllers" id="KsC-cg-ybm"/>
                         <segue destination="MN5-QE-iCJ" kind="relationship" relationship="viewControllers" id="Ek7-sH-kl2"/>
+                        <segue destination="yHi-v6-MDu" kind="relationship" relationship="viewControllers" id="ROe-Ey-cR0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qh-IM-R6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -811,11 +812,11 @@
             </objects>
             <point key="canvasLocation" x="2742" y="-593"/>
         </scene>
-        <!--Item-->
+        <!--Nasa-->
         <scene sceneID="BKq-pa-YZE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MN5-QE-iCJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hSq-L4-WV0"/>
+                    <tabBarItem key="tabBarItem" title="Nasa" id="hSq-L4-WV0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPf-VY-dpp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -829,6 +830,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1v-Ir-ppM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2741" y="131"/>
+        </scene>
+        <!--Characters-->
+        <scene sceneID="pga-cD-bG5">
+            <objects>
+                <tableViewController id="MJs-H8-Qvs" customClass="CharactersMarvelTableVC" customModule="teste_qranio_thomas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Ma-If-0DD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" id="kD9-bK-rPA">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kD9-bK-rPA" id="bEp-ry-V3J">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MJs-H8-Qvs" id="Hqf-wZ-aRL"/>
+                            <outlet property="delegate" destination="MJs-H8-Qvs" id="UJX-ks-jxW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Characters" id="kCr-pf-Tfb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5D4-FX-Z0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3652.1739130434785" y="842.41071428571422"/>
+        </scene>
+        <!--Marvel-->
+        <scene sceneID="iZD-Yv-c2K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yHi-v6-MDu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Marvel" id="HqZ-fh-BHm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eGl-Bc-kHA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MJs-H8-Qvs" kind="relationship" relationship="rootViewController" id="Mmb-Af-ZFy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlY-RP-IU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742.0289855072465" y="842.41071428571422"/>
         </scene>
     </scenes>
 </document>
