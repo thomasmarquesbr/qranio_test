@@ -76,5 +76,5 @@ struct Constants {
     static let TITLE = "title"
     static let DATA = "data"
     static let RESULTS = "results"
-    
+    static let EVENTS = "events"
 }

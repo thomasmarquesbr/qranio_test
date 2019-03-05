@@ -69,4 +69,34 @@ class MarvelDao {
         }
     }
     
+    func getEvents(idCharacter: Int, completion: @escaping([Event]?)-> Void) {
+        let timestamp = NSDate().timeIntervalSince1970
+        let md5 = Hash.md5Hex("\(timestamp)\(Constants.PRIV_KEY_MARVEL)\(Constants.PUB_KEY_MARVEL)")
+        let url = "\(MarvelDao.BASE_URL_API)characters/\(idCharacter)/events?ts=\(timestamp)&apikey=\(Constants.PUB_KEY_MARVEL)&hash=\(md5)"
+        AF.request(url).responseJSON { response in
+            guard let data = response.value as? [String: Any] else {
+                completion(nil)
+                return
+            }
+            guard let dt = data[Constants.DATA] as? [String: Any] else {
+                completion(nil)
+                return
+            }
+            print(dt)
+            guard let results = dt[Constants.RESULTS] as? [Any] else {
+                completion(nil)
+                return
+            }
+            
+            print(results)
+            var events = [Event]()
+            for result in results {
+                if let event = Event(result as? [String: Any] ?? [:]) {
+                    events.append(event)
+                }
+            }
+            completion(events)
+        }
+    }
+    
 }

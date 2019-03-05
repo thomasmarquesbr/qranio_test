@@ -41,6 +41,10 @@ class CharactersTableVC: UITableViewController {
             self.performSegue(withIdentifier: "goToComics", sender: self)
         }
         alert.addAction(actionComics)
+        let eventsComics = UIAlertAction(title: Constants.EVENTS, style: .default) { action in
+            self.performSegue(withIdentifier: "goToEvents", sender: self)
+        }
+        alert.addAction(eventsComics)
         let actionCancel = UIAlertAction(title: Constants.CANCEL, style: .cancel, handler: nil)
         alert.addAction(actionCancel)
         present(alert, animated: true, completion: nil)
@@ -53,7 +57,9 @@ class CharactersTableVC: UITableViewController {
             comicsTableVC.character = character
             comicsTableVC.title = Constants.COMICS
         } else { //goToEvents
-            
+            let eventsTableVC = segue.destination as! EventsTableVC
+            eventsTableVC.character = character
+            eventsTableVC.title = Constants.EVENTS
         }
     }
     
