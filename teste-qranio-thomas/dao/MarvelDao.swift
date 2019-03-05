@@ -22,11 +22,11 @@ class MarvelDao {
                 completion(nil)
                 return
             }
-            guard let dt = data["data"] as? [String: Any] else {
+            guard let dt = data[Constants.DATA] as? [String: Any] else {
                 completion(nil)
                 return
             }
-            guard let results = dt["results"] as? [Any] else {
+            guard let results = dt[Constants.RESULTS] as? [Any] else {
                 completion(nil)
                 return
             }
@@ -38,6 +38,34 @@ class MarvelDao {
                 }
             }
             completion(characters)
+        }
+    }
+    
+    func getComics(idCharacter: Int, completion: @escaping([Comic]?)-> Void) {
+        let timestamp = NSDate().timeIntervalSince1970
+        let md5 = Hash.md5Hex("\(timestamp)\(Constants.PRIV_KEY_MARVEL)\(Constants.PUB_KEY_MARVEL)")
+        let url = "\(MarvelDao.BASE_URL_API)characters/\(idCharacter)/comics?ts=\(timestamp)&apikey=\(Constants.PUB_KEY_MARVEL)&hash=\(md5)"
+        AF.request(url).responseJSON { response in
+            guard let data = response.value as? [String: Any] else {
+                completion(nil)
+                return
+            }
+            guard let dt = data[Constants.DATA] as? [String: Any] else {
+                completion(nil)
+                return
+            }
+            guard let results = dt[Constants.RESULTS] as? [Any] else {
+                completion(nil)
+                return
+            }
+            
+            var comics = [Comic]()
+            for result in results {
+                if let comic = Comic(result as? [String: Any] ?? [:]) {
+                    comics.append(comic)
+                }
+            }
+            completion(comics)
         }
     }
     

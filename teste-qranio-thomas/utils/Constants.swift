@@ -71,5 +71,10 @@ struct Constants {
     static let RESOURCE_URI = "resourceURI"
     static let THUMBNAIL = "thumbnail"
     static let PATH = "path"
+    static let COMICS = "comics"
+    static let CANCEL = "Cancel"
+    static let TITLE = "title"
+    static let DATA = "data"
+    static let RESULTS = "results"
     
 }

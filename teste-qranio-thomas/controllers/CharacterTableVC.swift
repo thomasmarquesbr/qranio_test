@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CharactersMarvelTableVC: UITableViewController {
+class CharactersTableVC: UITableViewController {
     
     var characters = [Character]()
     var willLoadMore = false
     var countCells = 0
+    var selectedCharacter: Character?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.separatorStyle = .none
         loadListCharacters(from: 0, to: 20)
     }
@@ -28,6 +28,33 @@ class CharactersMarvelTableVC: UITableViewController {
             self.countCells += list.count
             self.tableView.reloadData()
         })
+    }
+    
+    func createActionsForSelectedRow() {
+        guard let character = selectedCharacter else { return }
+        let alert = UIAlertController(title: "Choose an action:", message: nil, preferredStyle: .actionSheet)
+        let actionDescription = UIAlertAction(title: Constants.DESCRIPTION, style: .default) { action in
+            Alert(self).show(title: character.name, message: character.description, buttonTitle: Constants.OK)
+        }
+        alert.addAction(actionDescription)
+        let actionComics = UIAlertAction(title: Constants.COMICS, style: .default) { action in
+            self.performSegue(withIdentifier: "goToComics", sender: self)
+        }
+        alert.addAction(actionComics)
+        let actionCancel = UIAlertAction(title: Constants.CANCEL, style: .cancel, handler: nil)
+        alert.addAction(actionCancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let character = selectedCharacter else { return }
+        if segue.identifier == "goToComics" {
+            let comicsTableVC = segue.destination as! ComicsTableVC
+            comicsTableVC.character = character
+            comicsTableVC.title = Constants.COMICS
+        } else { //goToEvents
+            
+        }
     }
     
     
@@ -45,6 +72,12 @@ class CharactersMarvelTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as! UITableViewCell
         cell.textLabel?.text = character.name
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCharacter = characters[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+        createActionsForSelectedRow()
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
