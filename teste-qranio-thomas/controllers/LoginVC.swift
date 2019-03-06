@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+import TransitionButton
 
 class LoginVC: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var loginButton: TransitionButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     func callMainVC() {
@@ -42,24 +46,46 @@ class LoginVC: UIViewController {
         }
     }
     
+    
     //MARK:- Button Actions
-    @IBAction func didTapLogin(_ sender: Any) {
+    @IBAction func didTapLogin(_ button: TransitionButton) {
         if formIsValid() {
             guard let email = emailTextField.text else { return }
             guard let password = passwordTextField.text else { return }
-            activityIndicator.startAnimating()
+            button.startAnimation()
             LoginDao().performLogin(email, password) { (errorMessage) in
-                self.activityIndicator.stopAnimating()
                 if let message = errorMessage {
-                    Alert(self).show(title: Constants.ERROR,
-                                     message: message,
-                                     buttonTitle: Constants.OK,
-                                     buttonTouched: nil,
-                                     completion: nil)
+                    button.stopAnimation(animationStyle: .shake, revertAfterDelay: 0.5, completion: {
+                        Alert(self).show(title: Constants.ERROR,
+                                         message: message,
+                                         buttonTitle: Constants.OK,
+                                         buttonTouched: nil,
+                                         completion: nil)
+                    })
                 } else {
                     self.callMainVC()
                 }
             }
+        }
+    }
+    
+}
+
+extension LoginVC: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if emailTextField == textField {
+            emailTextField.iconImageView.image = UIImage(named: "email-black")
+        } else {
+            passwordTextField.iconImageView.image = UIImage(named: "lock-black")
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if emailTextField == textField {
+           emailTextField.iconImageView.image = UIImage(named: "email-grey")
+        } else {
+            passwordTextField.iconImageView.image = UIImage(named: "lock-grey")
         }
     }
     

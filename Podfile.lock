@@ -101,12 +101,16 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - SkyFloatingLabelTextField (3.6.0)
+  - TransitionButton (0.5.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.2)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - SkyFloatingLabelTextField (~> 3.0)
+  - TransitionButton
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -127,6 +131,8 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SkyFloatingLabelTextField
+    - TransitionButton
 
 SPEC CHECKSUMS:
   Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
@@ -146,7 +152,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
+  TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 0ef00b2d4cb03482f2182e999acd464bcfe45d17
+PODFILE CHECKSUM: 144283ab432512d78e44fadc20ebb214b2009a08
 
 COCOAPODS: 1.5.3
