@@ -16,6 +16,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var loginButton: TransitionButton!
     
+    let blackIconNames = ["email-black", "lock-black"]
+    let greyIconNames = ["email-grey", "lock-grey"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
@@ -74,19 +77,15 @@ class LoginVC: UIViewController {
 extension LoginVC: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if emailTextField == textField {
-            emailTextField.iconImageView.image = UIImage(named: "email-black")
-        } else {
-            passwordTextField.iconImageView.image = UIImage(named: "lock-black")
-        }
+        guard let customTextField = textField as? SkyFloatingLabelTextFieldWithIcon else { return }
+        let image = blackIconNames[customTextField.tag]
+        customTextField.iconImageView.image = UIImage(named: image)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if emailTextField == textField {
-           emailTextField.iconImageView.image = UIImage(named: "email-grey")
-        } else {
-            passwordTextField.iconImageView.image = UIImage(named: "lock-grey")
-        }
+        guard let customTextField = textField as? SkyFloatingLabelTextFieldWithIcon else { return }
+        let image = greyIconNames[customTextField.tag]
+        customTextField.iconImageView.image = UIImage(named: image)
     }
     
 }
