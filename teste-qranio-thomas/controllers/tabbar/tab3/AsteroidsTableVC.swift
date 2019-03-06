@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AsteroidsTableVC: UITableViewController {
+class AsteroidsTableVC: UIBaseTableViewController {
     
     var days = [String]()
     var asteroids = [String: [Asteroid]]()
@@ -18,20 +18,7 @@ class AsteroidsTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        loadListAsteroids()
-    }
-    
-    func loadListAsteroids() {
-        guard let startDate = startDate else { return }
-        guard let endDate = endDate else { return }
-        AsteroidsDao().getAsteroids(startDate, endDate) { days, asteroids in
-            guard let daysList = days else { return }
-            guard let asteroidList = asteroids else { return }
-            
-            self.days = daysList
-            self.asteroids = asteroidList
-            self.tableView.reloadData()
-        }
+        loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,6 +31,21 @@ class AsteroidsTableVC: UITableViewController {
         }
     }
     
+    //MARK:- BaseTableView
+    override func loadData() {
+        guard let startDate = startDate else { return }
+        guard let endDate = endDate else { return }
+        startLoading()
+        AsteroidsDao().getAsteroids(startDate, endDate) { days, asteroids in
+            self.stopLoading()
+            guard let daysList = days else { return }
+            guard let asteroidList = asteroids else { return }
+            
+            self.days = daysList
+            self.asteroids = asteroidList
+            self.tableView.reloadData()
+        }
+    }
     
     //MARK:- TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,6 +67,18 @@ class AsteroidsTableVC: UITableViewController {
         cell.textLabel?.text = asteroid.name
         cell.detailTextLabel?.text = "\(asteroid.absoluteMagnitude) \(Constants.ABSOLUTE_MAGNITUDE_LABEL)"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = (indexPath.row % 2 == 0) ? UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0) : UIColor.white
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.white.withAlphaComponent(1.0)
     }
     
 }

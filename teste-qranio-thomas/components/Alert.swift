@@ -19,6 +19,7 @@ class Alert {
     func show(title: String?, message: String?, buttonTitle: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: buttonTitle, style: .default)
+        action.setValue(UIColor.black, forKey: "titleTextColor")
         alert.addAction(action)
         viewController.present(alert, animated: true)
     }
@@ -28,6 +29,7 @@ class Alert {
         let action = UIAlertAction(title: buttonTitle, style: .default) { (action) in
             buttonTouched?()
         }
+        action.setValue(UIColor.black, forKey: "titleTextColor")
         alert.addAction(action)
         viewController.present(alert, animated: true) {
             completion?()
@@ -43,12 +45,17 @@ class Alert {
               completion: (()->Void)?) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
         let leftAction = UIAlertAction(title: leftButtonTitle, style: .cancel) { (action) in
             leftButtonTouched?()
         }
         let rightAction = UIAlertAction(title: rightButtonTitle, style: .default) { (action) in
             rightButtonTouched?()
         }
+        
+        leftAction.setValue(UIColor.black, forKey: "titleTextColor")
+        rightAction.setValue(UIColor.black, forKey: "titleTextColor")
+        
         alert.addAction(leftAction)
         alert.addAction(rightAction)
         viewController.present(alert, animated: true) {

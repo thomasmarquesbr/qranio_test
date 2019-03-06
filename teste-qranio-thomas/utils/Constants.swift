@@ -77,4 +77,9 @@ struct Constants {
     static let DATA = "data"
     static let RESULTS = "results"
     static let EVENTS = "events"
+    static let COUNT_OBJECTS_CLOSE_IS = "Count of objects close to the ground is"
+    static let CLOSE_APPROACH_COUNT_IS = "Close approach count is"
+    static let LATEST_UPDATE_IS = "Latest update is"
+    static let NEAR_EARTH_OBJECTS = "near_earth_objects"
+    
 }

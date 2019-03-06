@@ -60,9 +60,10 @@ class NasaStatsVC: UIViewController {
     }
     
     func showInfo(_ nasaStats: NasaStats) {
-        self.nearEarthObjectCountTextField.text = String(describing: nasaStats.nearEarthObjectCount)
-        self.closeApproachCountTextField.text = String(describing: nasaStats.closeApproachCout)
-        self.lastUpdatedTextField.text = nasaStats.lastUpdated
+        self.nearEarthObjectCountTextField.text = "\(Constants.COUNT_OBJECTS_CLOSE_IS) \(String(describing: nasaStats.nearEarthObjectCount))"
+        self.closeApproachCountTextField.text = "\(Constants.CLOSE_APPROACH_COUNT_IS) \(String(describing: nasaStats.closeApproachCout))"
+        self.lastUpdatedTextField.text = "\(Constants.LATEST_UPDATE_IS) \(nasaStats.lastUpdated)"
+        self.sourceTextField.text = nasaStats.source
         self.nasaJplUrlTextField.text = nasaStats.nasaJplUrl
     }
     

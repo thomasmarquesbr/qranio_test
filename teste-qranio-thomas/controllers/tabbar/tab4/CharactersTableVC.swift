@@ -18,11 +18,11 @@ class CharactersTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        loadListCharacters(from: 0, to: 20)
+        loadListCharacters(more: 50)
     }
     
-    func loadListCharacters(from: Int, to: Int) {
-        MarvelDao().getCharacters(limit: to, offset: from, completion: { characters in
+    func loadListCharacters(more: Int) {
+        MarvelDao().getCharacters(limit: more, offset: countCells+1, completion: { characters in
             guard let list = characters else { return }
             self.characters.append(contentsOf: list)
             self.countCells += list.count
@@ -33,20 +33,28 @@ class CharactersTableVC: UITableViewController {
     func createActionsForSelectedRow() {
         guard let character = selectedCharacter else { return }
         let alert = UIAlertController(title: "Choose an action:", message: nil, preferredStyle: .actionSheet)
-        let actionDescription = UIAlertAction(title: Constants.DESCRIPTION, style: .default) { action in
+        
+        let actionDescription = UIAlertAction(title: Constants.DESCRIPTION.capitalizingFirstLetter(), style: .default) { action in
             Alert(self).show(title: character.name, message: character.description, buttonTitle: Constants.OK)
         }
-        alert.addAction(actionDescription)
-        let actionComics = UIAlertAction(title: Constants.COMICS, style: .default) { action in
+        let actionComics = UIAlertAction(title: Constants.COMICS.capitalizingFirstLetter(), style: .default) { action in
             self.performSegue(withIdentifier: "goToComics", sender: self)
         }
-        alert.addAction(actionComics)
-        let eventsComics = UIAlertAction(title: Constants.EVENTS, style: .default) { action in
+        let actionEvents = UIAlertAction(title: Constants.EVENTS.capitalizingFirstLetter(), style: .default) { action in
             self.performSegue(withIdentifier: "goToEvents", sender: self)
         }
-        alert.addAction(eventsComics)
         let actionCancel = UIAlertAction(title: Constants.CANCEL, style: .cancel, handler: nil)
+        
+        actionDescription.setValue(UIColor.black, forKey: "titleTextColor")
+        actionComics.setValue(UIColor.black, forKey: "titleTextColor")
+        actionEvents.setValue(UIColor.black, forKey: "titleTextColor")
+        actionCancel.setValue(UIColor.black, forKey: "titleTextColor")
+        
+        alert.addAction(actionDescription)
+        alert.addAction(actionComics)
+        alert.addAction(actionEvents)
         alert.addAction(actionCancel)
+        
         present(alert, animated: true, completion: nil)
     }
     
@@ -88,7 +96,7 @@ class CharactersTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == characters.count - 1 {
-            loadListCharacters(from: countCells+1, to: countCells + 20)
+            loadListCharacters(more: 50)
         }
     }
     

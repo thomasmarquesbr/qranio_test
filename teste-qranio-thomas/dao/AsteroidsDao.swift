@@ -36,7 +36,7 @@ class AsteroidsDao {
                 completion(nil, nil)
                 return
             }
-            guard let daysData = data["near_earth_objects"] as? [String: [Any]] else {
+            guard let daysData = data[Constants.NEAR_EARTH_OBJECTS] as? [String: [Any]] else {
                 completion(nil, nil)
                 return
             }

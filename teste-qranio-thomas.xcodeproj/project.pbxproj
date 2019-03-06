@@ -18,6 +18,8 @@
 		E90F3F71222990FB00613100 /* teste_qranio_thomasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F3F70222990FB00613100 /* teste_qranio_thomasTests.swift */; };
 		E90F3F7C222990FB00613100 /* teste_qranio_thomasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F3F7B222990FB00613100 /* teste_qranio_thomasUITests.swift */; };
 		E91A29A0222F7315007FFCD2 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A299F222F7314007FFCD2 /* UILabelExtension.swift */; };
+		E91A29A2222F92B2007FFCD2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A29A1222F92B2007FFCD2 /* StringExtension.swift */; };
+		E91A29A5222F9802007FFCD2 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A29A4222F9802007FFCD2 /* BaseTableViewController.swift */; };
 		E95853C4222B924200E888D3 /* AsteroidsDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C3222B924200E888D3 /* AsteroidsDao.swift */; };
 		E95853C6222C4B2B00E888D3 /* AsteroidDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C5222C4B2B00E888D3 /* AsteroidDetail.swift */; };
 		E95853C8222C4BA000E888D3 /* AsteroidDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */; };
@@ -25,7 +27,7 @@
 		E95853CC222CA69700E888D3 /* NasaStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853CB222CA69700E888D3 /* NasaStats.swift */; };
 		E95853CE222CAAD200E888D3 /* NasaStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */; };
 		E95853D0222D760500E888D3 /* MarvelDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853CF222D760500E888D3 /* MarvelDao.swift */; };
-		E95853D2222D76B200E888D3 /* CharacterTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D1222D76B200E888D3 /* CharacterTableVC.swift */; };
+		E95853D2222D76B200E888D3 /* CharactersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D1222D76B200E888D3 /* CharactersTableVC.swift */; };
 		E95853D4222D802E00E888D3 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D3222D802E00E888D3 /* Hash.swift */; };
 		E95853D6222E1E8800E888D3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D5222E1E8800E888D3 /* Character.swift */; };
 		E95853DA222F118C00E888D3 /* ComicsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853D9222F118C00E888D3 /* ComicsTableVC.swift */; };
@@ -88,6 +90,8 @@
 		E90F3F7B222990FB00613100 /* teste_qranio_thomasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teste_qranio_thomasUITests.swift; sourceTree = "<group>"; };
 		E90F3F7D222990FB00613100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E91A299F222F7314007FFCD2 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		E91A29A1222F92B2007FFCD2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E91A29A4222F9802007FFCD2 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		E95853C3222B924200E888D3 /* AsteroidsDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsDao.swift; sourceTree = "<group>"; };
 		E95853C5222C4B2B00E888D3 /* AsteroidDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetail.swift; sourceTree = "<group>"; };
 		E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailVC.swift; sourceTree = "<group>"; };
@@ -95,7 +99,7 @@
 		E95853CB222CA69700E888D3 /* NasaStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaStats.swift; sourceTree = "<group>"; };
 		E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaStatsVC.swift; sourceTree = "<group>"; };
 		E95853CF222D760500E888D3 /* MarvelDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDao.swift; sourceTree = "<group>"; };
-		E95853D1222D76B200E888D3 /* CharacterTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableVC.swift; sourceTree = "<group>"; };
+		E95853D1222D76B200E888D3 /* CharactersTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableVC.swift; sourceTree = "<group>"; };
 		E95853D3222D802E00E888D3 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		E95853D5222E1E8800E888D3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E95853D9222F118C00E888D3 /* ComicsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTableVC.swift; sourceTree = "<group>"; };
@@ -225,6 +229,70 @@
 			path = "teste-qranio-thomasUITests";
 			sourceTree = "<group>";
 		};
+		E91A29A3222F97EF007FFCD2 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				E91A29A4222F9802007FFCD2 /* BaseTableViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		E91A29A622300C6C007FFCD2 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				E90F3F5D222990FA00613100 /* LoginVC.swift */,
+				E9CAE2522229F29B00391A8F /* SignUpVC.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		E91A29A722300CA0007FFCD2 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				E91A29AB22300CC4007FFCD2 /* tab4 */,
+				E91A29AA22300CBE007FFCD2 /* tab3 */,
+				E91A29A922300CB8007FFCD2 /* tab2 */,
+				E91A29A822300CB0007FFCD2 /* tab1 */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
+		E91A29A822300CB0007FFCD2 /* tab1 */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAE24D2229E3B000391A8F /* ProfileVC.swift */,
+			);
+			path = tab1;
+			sourceTree = "<group>";
+		};
+		E91A29A922300CB8007FFCD2 /* tab2 */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAE25D222B865D00391A8F /* UsersTableVC.swift */,
+			);
+			path = tab2;
+			sourceTree = "<group>";
+		};
+		E91A29AA22300CBE007FFCD2 /* tab3 */ = {
+			isa = PBXGroup;
+			children = (
+				E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */,
+				E9CAE25F222B902800391A8F /* AsteroidsTableVC.swift */,
+				E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */,
+			);
+			path = tab3;
+			sourceTree = "<group>";
+		};
+		E91A29AB22300CC4007FFCD2 /* tab4 */ = {
+			isa = PBXGroup;
+			children = (
+				E95853D1222D76B200E888D3 /* CharactersTableVC.swift */,
+				E95853D9222F118C00E888D3 /* ComicsTableVC.swift */,
+				E95853DD222F1FD000E888D3 /* EventsTableVC.swift */,
+			);
+			path = tab4;
+			sourceTree = "<group>";
+		};
 		E9CAE2442229984000391A8F /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,16 +311,9 @@
 		E9CAE2452229984A00391A8F /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E90F3F5D222990FA00613100 /* LoginVC.swift */,
-				E9CAE2522229F29B00391A8F /* SignUpVC.swift */,
-				E9CAE24D2229E3B000391A8F /* ProfileVC.swift */,
-				E9CAE25D222B865D00391A8F /* UsersTableVC.swift */,
-				E95853CD222CAAD200E888D3 /* NasaStatsVC.swift */,
-				E9CAE25F222B902800391A8F /* AsteroidsTableVC.swift */,
-				E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */,
-				E95853D1222D76B200E888D3 /* CharacterTableVC.swift */,
-				E95853D9222F118C00E888D3 /* ComicsTableVC.swift */,
-				E95853DD222F1FD000E888D3 /* EventsTableVC.swift */,
+				E91A29A722300CA0007FFCD2 /* tabbar */,
+				E91A29A622300C6C007FFCD2 /* login */,
+				E91A29A3222F97EF007FFCD2 /* base */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -280,8 +341,8 @@
 		E9CAE24A2229E17E00391A8F /* components */ = {
 			isa = PBXGroup;
 			children = (
-				E9CAE256222A06D800391A8F /* extensions */,
 				E9CAE24B2229E1D700391A8F /* Alert.swift */,
+				E9CAE256222A06D800391A8F /* extensions */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -301,6 +362,7 @@
 			children = (
 				E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */,
 				E91A299F222F7314007FFCD2 /* UILabelExtension.swift */,
+				E91A29A1222F92B2007FFCD2 /* StringExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -554,6 +616,7 @@
 			files = (
 				E95853C8222C4BA000E888D3 /* AsteroidDetailVC.swift in Sources */,
 				E95853DE222F1FD000E888D3 /* EventsTableVC.swift in Sources */,
+				E91A29A2222F92B2007FFCD2 /* StringExtension.swift in Sources */,
 				E9CAE25E222B865D00391A8F /* UsersTableVC.swift in Sources */,
 				E9CAE2532229F29B00391A8F /* SignUpVC.swift in Sources */,
 				E95853D4222D802E00E888D3 /* Hash.swift in Sources */,
@@ -561,6 +624,7 @@
 				E9CAE24922299A1500391A8F /* LoginDao.swift in Sources */,
 				E90F3F5E222990FA00613100 /* LoginVC.swift in Sources */,
 				E9CAE255222A049500391A8F /* Validators.swift in Sources */,
+				E91A29A5222F9802007FFCD2 /* BaseTableViewController.swift in Sources */,
 				E9CAE25A222B776B00391A8F /* UsersDao.swift in Sources */,
 				E95853DC222F17C800E888D3 /* Comic.swift in Sources */,
 				E9CAE260222B902800391A8F /* AsteroidsTableVC.swift in Sources */,
@@ -569,7 +633,7 @@
 				E95853C4222B924200E888D3 /* AsteroidsDao.swift in Sources */,
 				E95853CA222C997A00E888D3 /* OrbitalData.swift in Sources */,
 				E91A29A0222F7315007FFCD2 /* UILabelExtension.swift in Sources */,
-				E95853D2222D76B200E888D3 /* CharacterTableVC.swift in Sources */,
+				E95853D2222D76B200E888D3 /* CharactersTableVC.swift in Sources */,
 				E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */,
 				E9CAE262222B907800391A8F /* Asteroid.swift in Sources */,
 				E90F3F5C222990FA00613100 /* AppDelegate.swift in Sources */,
