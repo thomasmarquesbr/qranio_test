@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharactersTableVC: UITableViewController {
+class CharactersTableVC: UIBaseTableViewController {
     
     var characters = [Character]()
     var willLoadMore = false
@@ -22,11 +22,23 @@ class CharactersTableVC: UITableViewController {
     }
     
     func loadListCharacters(more: Int) {
-        MarvelDao().getCharacters(limit: more, offset: countCells+1, completion: { characters in
-            guard let list = characters else { return }
+        if characters.count == 0 {
+            startLoading()
+        }
+        MarvelDao().getCharacters(limit: more, offset: countCells + 1, completion: { characters in
+            self.stopLoading()
+            guard let list = characters else {
+                self.show(message: Constants.ERROR_LOADING_INFO)
+                return
+            }
+            
             self.characters.append(contentsOf: list)
             self.countCells += list.count
-            self.tableView.reloadData()
+            if self.characters.count > 0 {
+                self.tableView.reloadData()
+            } else {
+                self.show(message: Constants.EMPTY_LIST_CHARACTERS)
+            }
         })
     }
     
@@ -63,14 +75,13 @@ class CharactersTableVC: UITableViewController {
         if segue.identifier == "goToComics" {
             let comicsTableVC = segue.destination as! ComicsTableVC
             comicsTableVC.character = character
-            comicsTableVC.title = Constants.COMICS
+            comicsTableVC.title = Constants.COMICS.capitalizingFirstLetter()
         } else { //goToEvents
             let eventsTableVC = segue.destination as! EventsTableVC
             eventsTableVC.character = character
-            eventsTableVC.title = Constants.EVENTS
+            eventsTableVC.title = Constants.EVENTS.capitalizingFirstLetter()
         }
     }
-    
     
     //MARK:- Table View
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -83,7 +94,7 @@ class CharactersTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let character = characters[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as! UITableViewCell
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "characterCell")
         cell.textLabel?.text = character.name
         return cell
     }

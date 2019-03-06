@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComicsTableVC: UITableViewController {
+class ComicsTableVC: UIBaseTableViewController {
     
     var character: Character?
     var comics = [Comic]()
@@ -16,20 +16,30 @@ class ComicsTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        loadListComics()
+        loadData()
     }
     
-    func loadListComics() {
+    //MARK:- BaseTableView
+    override func loadData() {
         guard let character = character else { return }
+        startLoading()
         MarvelDao().getComics(idCharacter: character.id) { comics in
-            guard let comics = comics else { return }
-            self.comics = comics
-            self.tableView.reloadData()
+            self.stopLoading()
+            guard let comics = comics else {
+                self.show(message: Constants.ERROR_LOADING_INFO)
+                return
+            }
+            
+            if comics.count > 0 {
+                self.comics = comics
+                self.tableView.reloadData()
+            } else {
+                self.show(message: Constants.EMPTY_LIST_COMICS)
+            }
         }
     }
     
-    
-    //MARK:- Table View
+    //MARK:- TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -40,10 +50,12 @@ class ComicsTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let comic = comics[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "comicCell") as! UITableViewCell
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "comicCell")
         cell.selectionStyle = .none
         cell.textLabel?.text = comic.title
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = comic.description
+        cell.detailTextLabel?.numberOfLines = 0
         return cell
     }
     

@@ -81,5 +81,12 @@ struct Constants {
     static let CLOSE_APPROACH_COUNT_IS = "Close approach count is"
     static let LATEST_UPDATE_IS = "Latest update is"
     static let NEAR_EARTH_OBJECTS = "near_earth_objects"
+    static let EMPTY_LIST_USERS = "No users available"
+    static let EMPTY_LIST_ASTEROIDS = "No asteroid available"
+    static let EMPTY_LIST_EVENTS = "No events available"
+    static let EMPTY_LIST_COMICS = "No comics available"
+    static let EMPTY_LIST_CHARACTERS = "No characters available"
+    static let ERROR_LOADING_INFO = "Error loading info"
+    static let LOADING = "Loading..."
     
 }

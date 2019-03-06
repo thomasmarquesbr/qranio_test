@@ -21,11 +21,18 @@ class UsersTableVC: UIBaseTableViewController {
     //MARK:- BaseTableView
     override func loadData() {
         startLoading()
-        UsersDao().getUsers { (users) in
+        UsersDao().getUsers { users in
             self.stopLoading()
-            guard let users = users else { return }
-            self.users = users
-            self.tableView.reloadData()
+            guard let users = users else {
+                self.show(message: Constants.ERROR_LOADING_INFO)
+                return
+            }
+            if users.count > 0 {
+                self.users = users
+                self.tableView.reloadData()
+            } else {
+                self.show(message: Constants.EMPTY_LIST_USERS)
+            }
         }
     }
     
@@ -40,7 +47,8 @@ class UsersTableVC: UIBaseTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UITableViewCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UITableViewCell
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "userCell")
         cell.selectionStyle = .none
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.email

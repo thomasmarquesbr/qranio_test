@@ -38,8 +38,14 @@ class AsteroidsTableVC: UIBaseTableViewController {
         startLoading()
         AsteroidsDao().getAsteroids(startDate, endDate) { days, asteroids in
             self.stopLoading()
-            guard let daysList = days else { return }
-            guard let asteroidList = asteroids else { return }
+            guard let daysList = days else {
+                self.show(message: Constants.ERROR_LOADING_INFO)
+                return
+            }
+            guard let asteroidList = asteroids else {
+                self.show(message: Constants.ERROR_LOADING_INFO)
+                return
+            }
             
             self.days = daysList
             self.asteroids = asteroidList
@@ -63,10 +69,14 @@ class AsteroidsTableVC: UIBaseTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let asteroid = asteroids[days[indexPath.section]]![indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "asteroidCell") as! UITableViewCell
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "asteroidCell")
         cell.textLabel?.text = asteroid.name
         cell.detailTextLabel?.text = "\(asteroid.absoluteMagnitude) \(Constants.ABSOLUTE_MAGNITUDE_LABEL)"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToAsteroidDetail", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventsTableVC: UITableViewController {
+class EventsTableVC: UIBaseTableViewController {
     
     var character: Character?
     var events = [Event]()
@@ -16,18 +16,28 @@ class EventsTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        loadListEvents()
+        loadData()
     }
     
-    func loadListEvents() {
+    //MARK:- BaseTableView
+    override func loadData() {
         guard let character = character else { return }
+        startLoading()
         MarvelDao().getEvents(idCharacter: character.id) { events in
-            guard let events = events else { return }
-            self.events = events
-            self.tableView.reloadData()
+            self.stopLoading()
+            guard let events = events else {
+                self.show(message: Constants.ERROR_LOADING_INFO)
+                return
+            }
+            
+            if events.count > 0 {
+                self.events = events
+                self.tableView.reloadData()
+            } else {
+                self.show(message: Constants.EMPTY_LIST_EVENTS)
+            }
         }
     }
-    
     
     //MARK:- Table View
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,10 +50,12 @@ class EventsTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = events[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! UITableViewCell
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "eventCell")
         cell.selectionStyle = .none
         cell.textLabel?.text = event.title
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = event.description
+        cell.detailTextLabel?.numberOfLines = 0
         return cell
     }
     
