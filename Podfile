@@ -11,6 +11,8 @@ target 'teste-qranio-thomas' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Alamofire', '~> 5.0.0-beta.2'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'TransitionButton'
 
   target 'teste-qranio-thomasTests' do
     inherit! :search_paths
