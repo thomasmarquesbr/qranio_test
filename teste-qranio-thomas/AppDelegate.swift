@@ -13,11 +13,28 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    func customizeApp() {
+        let mainColor = UIColor(red: 254/255.0, green: 202/255.0, blue: 48.0/255.0, alpha: 1.0)
+        
+        UITabBar.appearance().tintColor = UIColor.black
+        UITabBar.appearance().barTintColor = mainColor
+        UITabBar.appearance().backgroundColor = mainColor
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+        
+        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().backgroundColor = mainColor
+        UINavigationBar.appearance().barTintColor = mainColor
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "AppleSDGothicNeo-Bold", size: 20)!]
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UINavigationBar.appearance().prefersLargeTitles = true
+        customizeApp()
+        
         FirebaseApp.configure()
         var initialViewController: UIViewController!
         if LoginDao().getUserId() == nil {

@@ -39,6 +39,7 @@ class UsersTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UITableViewCell
+        cell.selectionStyle = .none
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.email
         return cell

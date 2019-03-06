@@ -17,6 +17,7 @@
 		E90F3F66222990FB00613100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90F3F64222990FB00613100 /* LaunchScreen.storyboard */; };
 		E90F3F71222990FB00613100 /* teste_qranio_thomasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F3F70222990FB00613100 /* teste_qranio_thomasTests.swift */; };
 		E90F3F7C222990FB00613100 /* teste_qranio_thomasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F3F7B222990FB00613100 /* teste_qranio_thomasUITests.swift */; };
+		E91A29A0222F7315007FFCD2 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A299F222F7314007FFCD2 /* UILabelExtension.swift */; };
 		E95853C4222B924200E888D3 /* AsteroidsDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C3222B924200E888D3 /* AsteroidsDao.swift */; };
 		E95853C6222C4B2B00E888D3 /* AsteroidDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C5222C4B2B00E888D3 /* AsteroidDetail.swift */; };
 		E95853C8222C4BA000E888D3 /* AsteroidDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */; };
@@ -86,6 +87,7 @@
 		E90F3F77222990FB00613100 /* teste-qranio-thomasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "teste-qranio-thomasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90F3F7B222990FB00613100 /* teste_qranio_thomasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teste_qranio_thomasUITests.swift; sourceTree = "<group>"; };
 		E90F3F7D222990FB00613100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E91A299F222F7314007FFCD2 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		E95853C3222B924200E888D3 /* AsteroidsDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsDao.swift; sourceTree = "<group>"; };
 		E95853C5222C4B2B00E888D3 /* AsteroidDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetail.swift; sourceTree = "<group>"; };
 		E95853C7222C4BA000E888D3 /* AsteroidDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailVC.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CAE257222A06F200391A8F /* UITextField+Extensions.swift */,
+				E91A299F222F7314007FFCD2 /* UILabelExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				E9CAE24C2229E1D700391A8F /* Alert.swift in Sources */,
 				E95853C4222B924200E888D3 /* AsteroidsDao.swift in Sources */,
 				E95853CA222C997A00E888D3 /* OrbitalData.swift in Sources */,
+				E91A29A0222F7315007FFCD2 /* UILabelExtension.swift in Sources */,
 				E95853D2222D76B200E888D3 /* CharacterTableVC.swift in Sources */,
 				E9CAE258222A06F200391A8F /* UITextField+Extensions.swift in Sources */,
 				E9CAE262222B907800391A8F /* Asteroid.swift in Sources */,
